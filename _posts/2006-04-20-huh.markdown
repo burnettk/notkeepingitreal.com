@@ -1,0 +1,7 @@
+---
+layout: post
+title: Huh
+typo_id: 1
+categories: rails
+---
+Well, it kind of seems as if Typo is working with the [rails of the day](http://weblog.rubyonrails.org/articles/2006/04/09/rails-1-1-2-tiny-fix-for-gems-dependencies). Sweet.

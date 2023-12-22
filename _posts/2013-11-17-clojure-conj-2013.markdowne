@@ -1,0 +1,64 @@
+---
+layout: post
+title: "Clojure Conj 2013"
+date: 2013-11-17 09:02
+comments: true
+categories: software clojure conj
+---
+
+These are some notes from [Clojure Conj 2013](http://lanyrd.com/2013/clojureconj/), where 370 actual or aspiring clojure developers hung out for three days.
+
+## data.fressian
+The [data.fressian](https://github.com/clojure/data.fressian) serialization/encoding library (to be released today) is pretty much edn (same goals, including cross-language), but designed for performance (it's binary).
+
+## core.matrix
+[core.matrix](https://github.com/mikera/core.matrix) is an array programming as a language extension for Clojure, with a numerical computing focus. It's in the same family as R.
+
+## Schema
+"Some of what makes Clojure great to write can make it difficult to read." Doc-strings can help a bit, but most of the downsides of comments (principally, they get out of date) also apply. [Schema](https://github.com/Prismatic/schema) is a library developed at Prismatic out of a desire to make clojure code more maintainable for new and experienced clojure developers alike. It allows the author of a function to specify the inputs and outputs in shareable, all-data, schemas. These schemas are great for making code more readable, but they can also be used to do runtime checking to ensure that your code is doing what you intended (you can turn this on by function, by namespace, or globally, and it is great when paired with automated tests). At Prismatic, the rule of thumb is that all functions meant to be used by other namespaces should have schemas. Schemas are not quite types (in fact, they are more flexible, since you can define your own structures and predicates) and not quite contracts. This is one of the things that is most interesting to me in terms of something to take back and directly apply to our production codebase.
+
+## Illuminated macros
+These guys have been writing some code to help make macros less difficult to write and use. This is something that looks like it might get back into clojure core.
+
+## Harmonikit
+Rich Hickey wrote a [harmonic synthesizer](https://github.com/richhickey/harmonikit) and an iPad UI, since "you need emacs for making music like you need it for having sex. And, for the ubergeeks in the audience: that is NOT AT ALL."
+
+## Cascalog
+[Cascalog](https://github.com/nathanmarz/cascalog) is a datalog DSL written in clojure that helps you write map reduce jobs. It sits on top of cascading, which in turn sits on top of hadoop. Recommended book: _The Design of Design_ (Fred Brooks). Cascalog is another nod to logic programming.
+
+## Hand tools
+Tim Ewald gave a very fun talk on why he uses hand tools:
+
+* Simple to the point of primitive
+* Great precision and control
+* Flexibility to make anything
+* Connects one to the work, and the effort to the results
+
+He noted how the rise of automation in woodworking has required trade-offs, including that design and proportionality have very often been trumped by cost concerns. In software, too, where we love automation, we would do well to be aware of potential downsides:
+
+* Don't spend hours trying to make something fit into your favorite super-high-level DSL, when a perfectly fine alternative exists at a lower level
+* Just because your development environment isn't aware of something (like a message bus) doesn't mean that that thing is not valuable
+* Our build tools (maven, leiningen) do lots of things for us; do we have enough knowledge to do what they do when their high-level abstractions break down?
+* If you want to build something unique, use simple tools
+
+"The more you automate, the less deeply you see. Be mindful when you automate; know your tools."
+
+## propaganda
+[Propaganda](https://github.com/tgk/propaganda) might be a good choice for you if you want to model a problem declaratively (like core.logic), and it particularly excels in arithmetic applications, and in its ability to show you the path the program is following to find the solution.
+
+## vert.x
+[vert.x](http://vertx.io/) is a web framework built on netty that offers an async, reactor-based run loop (like node and goliath) for efficiency, though it runs one reactor per core, not per process. It offers first-class support for a variety of programming languages. One of the main features of its architecture is an event bus that sits in the middle of the other components, keeping the subsystems very decoupled. The browser can also participate with the event bus, getting streamed events via SockJS, which gives you bi-directional communication via websockets, or various fallbacks.
+
+## liberator
+[liberator](https://github.com/clojure-liberator/liberator) is a clojure library that can be used to implement rest web services (mainly has ring in mind) on the server side. If you have lots of if/else's in your resource to handle edge cases and return various http codes, you may benefit from using liberator's DSL 
+
+## zeder
+Zeder is a production rules system that borrows some of the good datamic conventions and has some overlap of utility with core.logic. Fogus recommended _Out of the Tarpit_, calling it the "decomplecter's manifesto."
+
+## To the Moon
+Apollo, the mission to send people to the moon, had an arbitrary goal and deadline (just like many software projects). "We choose to go to the Moon in this decade and do the other things, not because they are easy, but because they are hard." -JFK. Takeaways:
+
+* Little things can kill you
+* Followship: the people in the mission control center didn't yell at Neil Armstrong and tell him to stop when he choose to take the Eagle ship off autopilot and land it himself (he had observed that it was on path to land in a crater full of car-sized boulders).
+* The moon landing is the cultural heritage of technologists like ourselves. Nothing is impossible, and we have to power to make it happen.
+* Russ Olsen is quite an amazing speaker.
