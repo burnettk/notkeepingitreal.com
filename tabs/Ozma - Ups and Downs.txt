@@ -1,0 +1,61 @@
+Notation:
+b - bend string up to next indicated note.
+r - release bend back to next indicated note.
+h - hammer onto the next indicated note
+x - muted rake across indicated strings
+
+Verse 1 (just rhythm guitar, voice, and snare drum):
+          G               C             D
+I've been cheating on you ever since we broke up
+          G                  C            D
+I've been dreaming about you ever since I woke up
+          G                     C              D
+And now my hearing's disappearing ever since you spoke up
+
+
+Prechorus:
+              Emi  E Eb D  C
+I'll devise a plot...   to break your heart
+Ami                       D
+Think up a plan that I'll never carry out
+Emi E Eb D  C           
+What's wrong with you?  
+Ami         D
+Tell me now, what should I do?
+
+
+Chorus:
+G           C
+Don't let me down
+B7         Emi       D            G
+I couldn't take much more of your love
+
+
+Riff on G: 
+
+    G   A    Bmi
+e----------------------------------------------------------
+B----------------------------------------------------------
+G----------------------------------------------------------
+D---5---4-4---5-4--4-4-------------------------------------
+A----------------------------------------------------------
+E---3---5-5---7-7--7-7-------------------------------------
+
+
+Verse 2
+Prechorus 2
+Chorus 2
+Chorus 3
+Chorus 4
+
+Guitar melody outtro:
+
+    G        Ami     Bmi
+e----------------------------------------------------------
+B---8---8-10-7---------------------------------------------
+G-----7--------7-------------------------------------------
+D----------------9---------------9-9-----------------------
+A------------------10-9---10-9-7---------------------------
+E----------------------------------------------------------
+
+AT THE DRIVE-IN FOREVER!!!!!!!!!!!!!!
