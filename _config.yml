@@ -28,10 +28,17 @@ url: "https://notkeepingitreal.com" # the base hostname & protocol for your site
 twitter_username: kbbkkbbk
 github_username:  burnettk
 permalink: /articles/:year/:month/:day/:title/
+category_dir: articles/category
+# https://feedburner.google.com/manage/td4d32kp82m2b3dvlr8qjjib34
+feed:
+  # this defaults to feed.xml but https://feedburner.google.com has always wanted /atom.xml this since i configured it way back in the day
+  # could change it in feedburner, but meh
+  path: /atom.xml
 
 
 # Build settings
-theme: minima
+# theme: minima
+theme: beautiful-jekyll-theme
 plugins:
   - jekyll-feed
 
