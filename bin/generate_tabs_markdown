@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Define the output file
+output_file="tabs.md"
+
+# Write the header to the output file
+cat <<EOL >$output_file
+---
+layout: page
+title: Tabs
+---
+
+EOL
+
+# Loop through each .txt file in the tabs directory
+for file in tabs/*.txt; do
+  # Get the filename without the path
+  filename=$(basename "$file")
+
+  # Remove the .txt extension for the link label
+  link_label="${filename%.txt}"
+
+  # Replace spaces with %20 for the href
+  href="${file// /%20}"
+
+  # Add the markdown link to the output file
+  echo "- [$link_label](/$href)" >>$output_file
+done
