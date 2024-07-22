@@ -9,8 +9,8 @@ This is hopefully a great resource for saving you and your team time and energy.
 
 Table of Contents
 
-* Do not remove this line (it will not be displayed)
-{:toc}
+- Do not remove this line (it will not be displayed)
+  {:toc}
 
 Let's get started.
 
@@ -134,7 +134,7 @@ This one pains me, since rails decided on plural, but it feels like more people 
 When you have a table with a compound unique key, name the key like `[table_name]_unique`, so if the table name is user, it would be `user_unique`.
 If you have a column named `[something]_id`, like `car_id`, it should be referencing a database primary key, so if your database primary keys are integers, it should be an integer.
 If you need to refer to another type of identifier that is not a database primary key, use the suffix `_identifier`, like `car_identifier` for your license plate numbers or whatever.
-Name foreign key constraints like this: [current_table][referencedtable][column]fk, so if you have a parent table, and a child table has a foreign key column parent_id, it should be called child_parent_id_fk
+Name foreign key constraints like this: `[current_table]_[referencedtable]_[referencetablecolumn]_fk`, so if you have a parent table with an id, and a child table referencing it, it should be called child_parent_id_fk
 
 ### Sorting
 
@@ -261,17 +261,29 @@ When you call glob to get a list of files, always sort the result.
 
 For example, in python, this is bad:
 
-````python
+```python
 files = glob.glob(file_glob)
-````
+```
 
 And this is good:
 
-````python
+```python
 files = sorted(glob.glob(file_glob))
-````
+```
 
 If you don't, you will have obscure bugs that are hard to track down years later because the sorting behavior is undefined / system-dependent.
+
+## User Experience
+
+### Dates and Times
+
+Use relative times if the user will be scanning for information, 9 minutes ago or 3 hours ago or 2 days ago, rather than Sep 3, 2024 at 9:30am or 2024-12-01 15:23 UTC.
+If you are presenting information in a non-relative format, use the user's timezone if possible.
+If you have a list of things, the most recent things should come first, all else being equal.
+
+### Apps
+
+If your mobile app is basically a web app, let people use your site in a browser.
 
 ## DevOps
 
@@ -307,6 +319,6 @@ If you have any feedback, please drop a note on hacker news.
 
 ## References
 
- * [A Set of Unit Testing Rules - Michael Feathers](https://www.artima.com/weblogs/viewpost.jsp?thread=126923)
- * [Sort alphabetically everything you can - Alexey Inkin](https://medium.com/flutter-senior/sort-alphabetically-everything-you-can-1e9d7299c4ae)
- * [Best practices for engine contributors - Godot](https://docs.godotengine.org/en/stable/contributing/development/best_practices_for_engine_contributors.html)
+- [A Set of Unit Testing Rules - Michael Feathers](https://www.artima.com/weblogs/viewpost.jsp?thread=126923)
+- [Sort alphabetically everything you can - Alexey Inkin](https://medium.com/flutter-senior/sort-alphabetically-everything-you-can-1e9d7299c4ae)
+- [Best practices for engine contributors - Godot](https://docs.godotengine.org/en/stable/contributing/development/best_practices_for_engine_contributors.html)
