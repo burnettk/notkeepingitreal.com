@@ -322,3 +322,4 @@ If you have any feedback, please drop a note on hacker news.
 - [A Set of Unit Testing Rules - Michael Feathers](https://www.artima.com/weblogs/viewpost.jsp?thread=126923)
 - [Sort alphabetically everything you can - Alexey Inkin](https://medium.com/flutter-senior/sort-alphabetically-everything-you-can-1e9d7299c4ae)
 - [Best practices for engine contributors - Godot](https://docs.godotengine.org/en/stable/contributing/development/best_practices_for_engine_contributors.html)
+- [JSON API Standard](https://jsonapi.org/)
