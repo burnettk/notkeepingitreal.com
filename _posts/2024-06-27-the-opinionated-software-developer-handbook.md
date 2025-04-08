@@ -3,7 +3,7 @@ layout: post
 title: "The Opinionated Software Developer Handbook: Code for Your Future Self"
 ---
 
-https://www.reddit.com/r/programming/
+<https://www.reddit.com/r/programming/>
 Do you hate making decisions that you shouldn't have to make?
 This is hopefully a great resource for saving you and your team time and energy.
 
@@ -134,7 +134,7 @@ This one pains me, since rails decided on plural, but it feels like more people 
 When you have a table with a compound unique key, name the key like `[table_name]_unique`, so if the table name is user, it would be `user_unique`.
 If you have a column named `[something]_id`, like `car_id`, it should be referencing a database primary key, so if your database primary keys are integers, it should be an integer.
 If you need to refer to another type of identifier that is not a database primary key, use the suffix `_identifier`, like `car_identifier` for your license plate numbers or whatever.
-Name foreign key constraints like this: `[current_table]_[referencedtable]_[referencetablecolumn]_fk`, so if you have a parent table with an id, and a child table referencing it, it should be called child_parent_id_fk
+Name foreign key constraints like this: `[current_table]_[referencetablecolumn]_fk`, so if you have a parent table with an id, and a child table referencing it, it should be called child_parent_id_fk
 
 ### Sorting
 
@@ -232,11 +232,11 @@ For example, for commit messages, use [conventional commits](https://www.convent
 
 ### Python
 
-#### Never use @staticmethod.
+#### Never use @staticmethod
 
 Even if the function doesn't depend on anything else in the class right now, using this means you can never call a helper method without repeating the name of the class.
 Just use @classmethod.
-Guido himself regrets adding @staticmethod to the language: https://mail.python.org/pipermail/python-ideas/2016-July/041189.html
+Guido himself regrets adding @staticmethod to the language: <https://mail.python.org/pipermail/python-ideas/2016-July/041189.html>
 
 #### Avoid overusing instance methods
 
@@ -301,10 +301,10 @@ With a make script, and with some common conventions, you can allow for somethin
 
 ```
 make help
-help		Print this help message
-test		Run the unit tests
-server-linux	Build a linux server
-server-mac	Build a MacOS server
+help  Print this help message
+test  Run the unit tests
+server-linux Build a linux server
+server-mac Build a MacOS server
 ```
 
 If you have a really good build tool in your technology of choice (cargo in Rust comes to mind), you might consider using that instead, but make is a good least common denominator that many people are familiar with across technologies.
