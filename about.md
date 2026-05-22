@@ -5,7 +5,7 @@ title: About
 
 I'm a software developer.
 I write something here from time to time.
-I work on [SpiffWorkflow](https://spiffworkflow.org).
+I work on [SpiffWorkflow](https://www.spiffworkflow.org).
 Here, have some [tabs](/tabs).
 
 Since the content on this site is somewhat overwhelmed by unedited notes from conference talks (which probably aren't really worth reading), here are some of my favorite posts:
