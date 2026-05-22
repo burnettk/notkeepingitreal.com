@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "notkeepingitreal-com",
+  "compatibility_date": "2026-05-22",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "./_site"
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "build": {
+    "command": "bundle exec jekyll build"
+  }
+}
