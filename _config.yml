@@ -19,6 +19,9 @@ category_dir: articles/category
 # https://feedburner.google.com/manage/td4d32kp82m2b3dvlr8qjjib34
 
 include: [".htaccess", "tabs"]
+exclude:
+  - bin
+  - README.md
 
 # Build settings
 # theme: minima
