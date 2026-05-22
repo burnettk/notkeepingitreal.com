@@ -22,6 +22,7 @@ include: [".htaccess", "tabs"]
 exclude:
   - bin
   - README.md
+  - wrangler.jsonc
 
 # Build settings
 # theme: minima
